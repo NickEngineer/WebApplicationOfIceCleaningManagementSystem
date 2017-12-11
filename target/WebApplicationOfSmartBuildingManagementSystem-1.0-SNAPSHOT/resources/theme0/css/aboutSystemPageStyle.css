@@ -1,0 +1,33 @@
+body {
+    background-image: url(https://c.wallhere.com/photos/d5/22/futuristic_architecture_landscape_futuristic_city-229635.jpg!d); /* Путь к фоновому изображению */
+    background-color: #eeeeee; /* Цвет фона */
+    background-size: cover;
+    min-width: 540px;
+    min-height: 362px;
+    margin: 0;
+    font-family: Calibri;
+}
+
+#data {
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: snow;
+    opacity: 0.9;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    height: auto;
+    min-height: 80%;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 0 10px white;
+}
+
+#text {
+    font-size: 24px;
+}
+
+h1 {
+    text-shadow: 1px 1px 2px black, 0 0 1em white;
+    color: #eeeeee;
+}

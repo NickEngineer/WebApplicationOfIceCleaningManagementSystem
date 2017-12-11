@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WebApplicationOfSmartBuildingManagementSystem:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="WebApplicationOfSmartBuildingManagementSystem-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="WebApplicationOfSmartBuildingManagementSystem:war exploded" />
+    </root>
+  </artifact>
+</component>
