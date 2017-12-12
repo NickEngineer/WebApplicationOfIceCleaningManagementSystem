@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns:b="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:beans="http://www.springframework.org/schema/beans"
+         xmlns="http://www.springframework.org/schema/security"
+         xsi:schemaLocation="
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd
+        http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <http auto-config="true">
+        <intercept-url pattern="/private-cabinet/*" access="hasRole('ROLE_USER')"/>
+        <intercept-url pattern="/private-cabinet" access="hasRole('ROLE_USER')"/>
+        <form-login login-page="/validate"
+                    default-target-url="/private-cabinet"
+                    authentication-failure-url="/validate?error=true"
+                    login-processing-url="/validate/check"
+                    password-parameter="password"
+                    username-parameter="login"/>
+
+        <!--  <logout logout-success-url="/" />-->
+         <logout logout-url="/logout" logout-success-url="/validate" invalidate-session="true" delete-cookies="JSESSIONID"/>
+
+         <!-- enable remember me -->
+        <remember-me
+                token-validity-seconds="1209600"
+                remember-me-parameter="remember_me"/>
+    </http>
+
+
+    <authentication-manager id="dao-auth">
+        <authentication-provider user-service-ref="userDetailsService">
+        </authentication-provider>
+    </authentication-manager>
+
+    <beans:bean id="userDetailsService" class="com.SmartBuildingManagementSystem.System.DAO.AppUserDetailsServiceDAO"/>
+
+</b:beans>

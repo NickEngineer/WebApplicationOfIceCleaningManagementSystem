@@ -1,0 +1,39 @@
+.selector {
+    position: relative;
+    left: 45%;
+    top: 45%;
+    width: 800px;
+    height: 800px;
+    margin-top: -70px;
+    margin-left: -70px;
+}
+
+body {
+    background-color: white; /* Цвет фона */
+    background-size: cover;
+    min-width: 540px;
+    min-height: 362px;
+}
+
+.roundMenu {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+}
+
+#rounding {
+    width: 140px;
+    height: 140px;
+    rotate: 0deg;
+    position: absolute;
+}
+
+#rounding:hover {
+    width: 145px;
+    height: 145px;
+}
+
+.roundMenu:hover {
+    width: 85px;
+    height: 85px;
+}

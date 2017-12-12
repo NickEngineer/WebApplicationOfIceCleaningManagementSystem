@@ -23,4 +23,8 @@ public class UserService {
         }
         return false;
     }
+
+    public User getUserByLogin(String login) {
+        return UserDao.getUserByLogin(login);
+    }
 }

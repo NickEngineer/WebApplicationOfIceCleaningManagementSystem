@@ -5,6 +5,24 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
 
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            /WEB-INF/Spring/applicationContext.xml
+            /WEB-INF/Spring/security-context.xml
+        </param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>
+            org.springframework.security.web.session.HttpSessionEventPublisher
+        </listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -12,10 +30,50 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>/WEB-INF/Spring/springConfig.xml</param-value>
         </init-param>
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-</web-app>
+
+    <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Spring Security Configuration File -->
+    <!-- <context-param>
+         <param-name>contextConfigLocation</param-name>
+         <param-value>/WEB-INF/Spring/spring-security.xml</param-value>
+     </context-param>-->
+
+     <!-- Creates the Spring Container shared by all Servlet and Filters -->
+
+    <!-- <listener>
+         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+     </listener>
+     <listener>
+         <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
+     </listener>
+
+     <session-config>
+         <session-timeout>15</session-timeout>
+     </session-config>-->
+
+     <!-- Spring Security Filter -->
+    <!--  <filter>
+          <filter-name>springSecurityFilterChain</filter-name>
+          <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+      </filter>
+
+      <filter-mapping>
+          <filter-name>springSecurityFilterChain</filter-name>
+          <url-pattern>/*</url-pattern>
+      </filter-mapping>-->
+  </web-app>

@@ -45,7 +45,7 @@ public class UserDao {
             String responseBody;
 
             try (Scanner scanner = new Scanner(response)) {
-                responseBody = scanner.useDelimiter("\n").next();
+                responseBody = scanner.useDelimiter("Z\tn").next();
             }
             return responseBody;
         } catch (Exception e) {
@@ -66,8 +66,30 @@ public class UserDao {
                 newUser.getLogin() + "\n" +
                 newUser.getPassword();
         String result = "";
-        result += exequteQueryToServer(query);
+        result = exequteQueryToServer(query);
         return result.equals("1");
+    }
 
+    public static User getUserByLogin(String login){
+        User user = new User();
+        String query = "get\n" +
+                "userByLogin\n" +
+                "1\n" +
+                login;
+
+        String result =exequteQueryToServer(query);
+
+        String loginFromDB;
+        String passwordFromDB;
+
+        try (Scanner scanner = new Scanner(result)) {
+            loginFromDB = scanner.useDelimiter("\n").next();
+            passwordFromDB = scanner.useDelimiter("\n").next();
+        }
+
+        user.setLogin(loginFromDB);
+        user.setPassword(passwordFromDB);
+
+        return user;
     }
 }

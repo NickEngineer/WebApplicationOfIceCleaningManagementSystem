@@ -36,7 +36,7 @@
                action="${contextPath}/addNewUser" class="form-signin">
         <h2 class="form-signin-heading">Please Register</h2>
         <form:input path="login" id="login" type="text" class="form-control" name="username" placeholder="Email Address"
-                    required="" autofocus=""/>
+                    required="" autofocus="true"/>
         <form:input path="password" id="password" type="password" class="form-control" name="password"
                     placeholder="Password" required=""/>
         <form:input path="repeatPassword" id="repeatPassword" type="password" class="form-control" name="repeatPassword"

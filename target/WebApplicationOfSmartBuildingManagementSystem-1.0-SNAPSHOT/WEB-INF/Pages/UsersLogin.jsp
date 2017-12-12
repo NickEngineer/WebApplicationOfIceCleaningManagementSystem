@@ -13,7 +13,7 @@
     <link href="${Bootstrap}" rel="stylesheet" var="Bootstrap"/>
     <script src="${defineJQuery}"></script>
 
-    <c:if test="${cssCondition.addStyles}">
+    <c:if test="${cssCondition.addStyles || not empty param.error}">
         <spring:url value="/resources/css/invalidEnterSystemPageStyle.css" var="crunchifyCSS"/>
         <spring:url value="/resources/js/dynamic.js" var="jqueryJs"/>
 
@@ -32,20 +32,24 @@
 <body>
 <a href="${contextPath}" id="title">Smart Building Management System</a>
 <div class="wrapper" id="login">
+    <!-- action="${contextPath}/validate/check"-->
     <form:form modelAttribute="userFromServer" method="POST"
-               action="${contextPath}/validate/check" class="form-signin">
+               action="${contextPath}/validate/check"  class="form-signin">
         <h2 class="form-signin-heading">Please login</h2>
-        <form:input path="login" id="login" type="text" class="form-control" name="username" placeholder="Email Address"
-                    required="" autofocus=""/>
+        <!--name="username"-->
+        <form:input path="login" id="login" name="username"  type="text" class="form-control"  placeholder="Email Address"
+                    required="" autofocus="true"/>
+        <!--name="password"-->
         <form:input path="password" id="password" type="password" class="form-control" name="password"
                     placeholder="Password" required=""/>
         <div id="crunchifyMessage"></div>
         <label class="checkbox">
-            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+            <!--name="rememberMe"-->
+            <input type="checkbox" value="remember-me" id="rememberMe" name="remember_me"> Remember me
         </label>
         <form:button class="btn btn-lg btn-primary btn-block" type="submit">Login</form:button>
         <form:button class="btn btn-lg btn-secondary btn-block" id="registrationLink"
-                     type="button">Registration</form:button>
+                     type="button"><a href="${contextPath}/registration">Registration</a></form:button>
     </form:form>
 </div>
 </body>
