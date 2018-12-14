@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration />
+    </facet>
     <facet type="web" name="Web">
       <configuration>
         <descriptors>
@@ -15,14 +18,6 @@
         </sourceRoots>
       </configuration>
     </facet>
-    <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/Spring/spring-security.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/Spring/springConfig.xml</file>
-        </fileset>
-      </configuration>
-    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -35,11 +30,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="resources" level="project" />
-    <orderEntry type="library" name="org.thymeleaf:thymeleaf:Release" level="project" />
-    <orderEntry type="library" name="org.thymeleaf.extras:thymeleaf-extras-springsecurity4:Release" level="project" />
-    <orderEntry type="library" name="org.thymeleaf:thymeleaf:Release1" level="project" />
-    <orderEntry type="library" name="org.thymeleaf.extras:thymeleaf-extras-springsecurity4:Release1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:3.2.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:3.2.7.RELEASE" level="project" />
@@ -88,5 +78,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: javax.annotation:jsr250-api:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:4.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.json:json:20171018" level="project" />
   </component>
 </module>

@@ -1,0 +1,105 @@
+.selector {
+    position: relative;
+    left: 50%;
+    top: 4%;
+    width: 540px;
+    height: 362px;
+    margin-left: -210px;
+}
+
+#privatCabTitle {
+    text-align: center;
+    font-family: Calibri;
+    -webkit-user-select: none;
+}
+
+body {
+    background-color: white;
+    background-size: cover;
+    min-width: 540px;
+    min-height: 362px;
+}
+
+.roundMenu {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    -webkit-user-select: none;
+    text-decoration: none;
+
+}
+
+#rounding {
+    width: 140px;
+    height: 140px;
+    rotate: 0deg;
+    position: absolute;
+    margin-left: 140px;
+    -webkit-user-select: none;
+    text-decoration: none;
+}
+
+#rounding:hover {
+    width: 145px;
+    height: 145px;
+    margin-left: 138.5px;
+    margin-top: -2.5px;
+}
+
+.roundMenu:hover {
+    width: 85px;
+    height: 85px;
+}
+
+#ventilation {
+    margin-left: 170px;
+    margin-top:150px;
+}
+
+#camera {
+    margin-left: 340px;
+}
+
+#light {
+
+}
+
+#security {
+    margin-top: 300px;
+    margin-left: 170px;
+}
+
+#door {
+    margin-top: 450px;
+    margin-left: 170px;
+}
+
+#lock {
+    margin-top: 150px;
+}
+
+#heat {
+    margin-top: 150px;
+    margin-left: 340px;
+}
+
+#wi-fi {
+    margin-top: 300px;
+}
+
+#temp {
+    margin-top: 300px;
+    margin-left: 340px;
+}
+
+#resource {
+    margin-top: 450px;
+}
+
+#condition {
+    margin-top: 450px;
+    margin-left: 340px;
+}
+
+
+

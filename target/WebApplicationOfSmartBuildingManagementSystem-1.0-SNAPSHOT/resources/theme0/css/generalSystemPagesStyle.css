@@ -11,3 +11,26 @@
 html, body {
     height: 100%;
 }
+
+.aboutUserLine {
+    position:absolute;
+    font-size: 28px;
+    font-family: Calibri;
+    text-align: right;
+    top: 10px;
+    right: 10px;
+    -webkit-user-select: none;
+}
+
+.logoutLink{
+    -webkit-user-select: none;
+    text-decoration: none;
+}
+
+.logoutImage{
+    height: 70px;
+}
+
+.privateCabinetImage{
+    height: 70px;
+}

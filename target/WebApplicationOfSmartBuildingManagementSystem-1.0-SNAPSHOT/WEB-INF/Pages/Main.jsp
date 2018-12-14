@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix= "security" uri= "http://www.springframework.org/security/tags" %>
 <html>
 <head>
     <title>Main page</title>
@@ -23,8 +24,20 @@
 
 <a href="${contextPath}" id="title">Smart Building Management System</a>
 
+<security:authorize access= "hasAnyRole('ROLE_USER')" var= "isUSer"/>
+<c:if test="${isUSer}">
+    <div class="aboutUserLine">
+        <a href="${contextPath}/private-cabinet" />
+            <img src="${contextPath}/resources/photos/Home_icon_grey.png"
+                 title="<security:authentication property='principal.username'/>" class="privateCabinetImage"/></a>
+        <a class="logoutLink" href="<c:url value="/logout" />">
+            <img src="${contextPath}/resources/photos/userLogout.png"  class="logoutImage"/>
+        </a>
+    </div>
+</c:if>
+
 <div class='selector'>
-    <img src="https://lh3.googleusercontent.com/CHf0W2V8oUYM0sz1zN3AItWTl78EDajyAcUfQPYA5LRzxR69YBM334mnZAMo2PCKcIo=w300" id="rounding">
+    <img src="${contextPath}/resources/photos/roundingImage.png" id="rounding">
     <ul>
         <li>
             <input id='1' type='checkbox' class="nextStep">

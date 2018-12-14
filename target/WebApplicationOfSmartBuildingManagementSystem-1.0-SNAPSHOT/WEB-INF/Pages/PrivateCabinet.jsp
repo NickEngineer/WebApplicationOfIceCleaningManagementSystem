@@ -5,48 +5,58 @@
 <html>
 <head>
     <title>PrivateCabinet</title>
-    <style>
-        body {
-            background-color: silver; /* Цвет фона */
-            background-size: cover;
-        }
-    </style>
+    <spring:url value="/resources/bootstrap$JQuery/jquery-3.2.1.min.js" var="defineJQuery"/>
+    <script src="${defineJQuery}"></script>
+
     <spring:url value="/resources/css/generalSystemPagesStyle.css" var="generalCssSettings"/>
     <link href="${generalCssSettings}" rel="stylesheet" var="generalCssSettings"/>
+    <spring:url value="/resources/css/privateCabinetPageStyle.css" var="privateCabinetPageStyle"/>
+    <link href="${privateCabinetPageStyle}" rel="stylesheet" var="privateCabinetPageStyle"/>
+
+    <spring:url value="/resources/js/privateCabinetDynamic.js" var="privateCabinetDynamic"/>
+    <script src="${privateCabinetDynamic}"></script>
 
     <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
 </head>
 <body>
-<a href="${contextPath}" id="title">Smart Building Management System</a>
-<br><b>Private Cabinet</b>
 
-<security:authorize access= "hasAnyRole('ROLE_ADMIN','ROLE_SUPER_USER', 'ROLE_USER')" var= "isUSer"/>
+<security:authorize access= "hasAnyRole('ROLE_USER')" var= "isUSer"/>
+<div id="header">
+    <a href="${contextPath}" id="title">Smart Building Management System</a>
+
+    <c:if test="${isUSer}">
+        <div class="aboutUserLine">
+            Hello,
+            <security:authentication property="principal.username"/>
+            <a class="logoutLink" href="<c:url value="/logout" />">(Logout)</a>
+        </div>
+    </c:if>
+
+    <h1 id="privatCabTitle">Private Cabinet</h1>
+</div>
 
 
-<c:if test= "${not isUSer}">
-    <li style= "padding-top: 15px; padding-bottom: 15px; color: red">
-        <c:if test= "${empty param.error}">
-            Вы не вошли в приложение
-        </c:if>
-    </li>
-    <li> <a style= "color: Green;" href= "<c:url value= ""/>">Login</a> </li>
-</c:if>
 
-<div></div>
 
-<c:if test= "${isUSer}">
-    <li style= "padding-top: 15px; padding-bottom: 15px; color: green">
-        Вы вошли как:
-        <security:authentication property= "principal.username"/> с ролью:
-        <b><security:authentication property= "principal.authorities"/></b>
+<div class='selector'>
+    <img src="${contextPath}/resources/photos/Setting.png" id="rounding"/>
+    <img src="${contextPath}/resources/photos/Temp.png" id="temp" class="roundMenu"/>
+    <a href="<c:url value="/private-cabinet/smart-ventilation" />">
+    <img src="${contextPath}/resources/photos/Vent.png" id="ventilation" class="roundMenu"/>
+    </a>
+    <img src="${contextPath}/resources/photos/Wi-Fi.png" id="wi-fi" class="roundMenu"/>
+    <img src="${contextPath}/resources/photos/Sequ.png" id="security" class="roundMenu"/>
+    <img src="${contextPath}/resources/photos/Res.png" id="resource" class="roundMenu"/>
+    <img src="${contextPath}/resources/photos/Repair.png" id="repair" class="roundMenu"/>
+    <img src="${contextPath}/resources/photos/Lock.png" id="lock" class="roundMenu"/>
+    <img src="${contextPath}/resources/photos/Light.png" id="light" class="roundMenu"/>
+    <img src="${contextPath}/resources/photos/Heat.png" id="heat" class="roundMenu"/>
+    <img src="${contextPath}/resources/photos/Door.png" id="door" class="roundMenu"/>
+    <img src="${contextPath}/resources/photos/Condition.png" id="condition" class="roundMenu"/>
+    <img src="${contextPath}/resources/photos/Cam.png" id="camera" class="roundMenu"/>
 
-    </li>
-    <li> <a style= "color: red;" href= "<c:url value= "/logout"/>">Logout</a> </li>
-    <li></li>
-    <a id="logoutLink" href="<c:url value="/logout" />">Logout2</a>
-    <a id="logoutLink" href="<c:url value="${contextPath}/private-cabinet/smart-ventilation" />">Smart Ventilation System</a>
-
-</c:if>
+</div>
 
 </body>
 </html>

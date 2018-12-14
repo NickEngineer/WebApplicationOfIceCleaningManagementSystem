@@ -1,5 +1,5 @@
 body {
-    background-image: url(https://c.wallhere.com/photos/d5/22/futuristic_architecture_landscape_futuristic_city-229635.jpg!d); /* Путь к фоновому изображению */
+    background-image: url(../photos/futuristic_architecture_landscape.jpeg); /* Путь к фоновому изображению */
     background-color: #eeeeee; /* Цвет фона */
     background-size: cover;
     min-width: 540px;

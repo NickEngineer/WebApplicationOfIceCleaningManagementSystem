@@ -1,0 +1,84 @@
+body {
+    font-family: Calibri;
+    -webkit-user-select: none;
+}
+
+#smartVentilationTitle {
+    text-align: center;
+}
+
+#smartVentilationChooseYourDeviceTitle {
+    text-align: center;
+}
+
+.menuManipulation {
+    height: 70px;
+}
+
+#menu {
+    right: 10px;
+    position: absolute;
+    z-index: 1000;
+}
+
+.device {
+    font-size: 40px;
+    margin-left: 5%;
+    margin-top: 30px;
+    width: 70%;
+    height: 200px;
+    border-color: #9fcdff;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 25px silver;
+    position: relative;
+}
+
+.openDevice {
+    position: absolute;
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.deviceNameShell {
+    magin-top: 10px;
+    margin-left: 10px;
+}
+
+.openDevice:hover {
+    height: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.checkboxDelete {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    margin-top: 84px;
+    margin-left: 140px;
+}
+
+.deviceName {
+    position: absolute;
+    margin-left: 170px;
+    top: 0px;
+}
+
+#openUsersDeviceForm{
+    visibility: hidden;
+}
+
+.deviceIp {
+    visibility: hidden;
+}
+
+.userId {
+    visibility: hidden;
+}

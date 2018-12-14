@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <html>
 <head>
     <title>AboutSystem</title>
@@ -15,6 +16,19 @@
 </head>
 <body>
 <a href="${contextPath}" id="title">Smart Building Management System</a>
+
+<security:authorize access= "hasAnyRole('ROLE_USER')" var= "isUSer"/>
+<c:if test="${isUSer}">
+    <div class="aboutUserLine">
+        <a href="${contextPath}/private-cabinet" />
+        <img src="${contextPath}/resources/photos/Home_icon_grey.png"
+             title="<security:authentication property='principal.username'/>" class="privateCabinetImage"/></a>
+        <a class="logoutLink" href="<c:url value="/logout" />">
+            <img src="${contextPath}/resources/photos/userLogout.png"  class="logoutImage"/>
+        </a>
+    </div>
+</c:if>
+
 <div id="data">
     <br>
     <h1><b>About Smart Building Management System</b></h1>

@@ -1,0 +1,66 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="WebApplicationOfIceCleaningManagementSystem:war exploded">
+    <output-path>$PROJECT_DIR$/target/WebApplicationOfIceCleaningManagementSystem-1.0-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="WebApplicationOfIceCleaningManagementSystem" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:3.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:3.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:3.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-plugin-api:3.3.9" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-model:3.3.9" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.4" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-artifact:3.3.9" />
+          <element id="library" level="project" name="Maven: org.eclipse.sisu:org.eclipse.sisu.plexus:0.3.2" />
+          <element id="library" level="project" name="Maven: javax.enterprise:cdi-api:1.0" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: org.eclipse.sisu:org.eclipse.sisu.inject:0.3.2" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-component-annotations:1.5.5" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-classworlds:2.5.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.plugins:maven-install-plugin:maven-plugin:2.5.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-project:2.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-settings:2.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-profile:2.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-plugin-registry:2.2.1" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-interpolation:1.11" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1" />
+          <element id="library" level="project" name="Maven: junit:junit:3.8.1" />
+          <element id="library" level="project" name="Maven: classworlds:classworlds:1.1-alpha-2" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-artifact-manager:2.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-repository-metadata:2.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven.wagon:wagon-provider-api:1.0-beta-6" />
+          <element id="library" level="project" name="Maven: backport-util-concurrent:backport-util-concurrent:3.1" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.6" />
+          <element id="library" level="project" name="Maven: org.apache.maven.shared:maven-shared-utils:0.4" />
+          <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:2.0.1" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-utils:3.0.15" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: javax.annotation:jsr250-api:1.0" />
+          <element id="library" level="project" name="Maven: org.json:json:20171018" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/WebApplicationOfIceCleaningManagementSystem-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="WebApplicationOfIceCleaningManagementSystem/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,58 @@
+#deviceNameTitle {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+
+#fanImage {
+    position: absolute;
+    width: 140px;
+    top: 80px;
+    left: 20px;
+}
+
+#slider {
+    width: auto;
+    height: 20px;
+    background-color: rgba(32, 43, 40, 0.16);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.ui-slider-handle {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 15px 15px 15px 15px !important;
+    -webkit-border-radius: 15px 15px 15px 15px !important;
+    background: -webkit-linear-gradient(top, #bfbfbf, white) !important;
+    background: -o-linear-gradient(top, #bfbfbf, white) !important;
+    background: -ms-linear-gradient(top, #bfbfbf, white) !important;
+    background: linear-gradient(top, #bfbfbf, white) !important;
+    border: none !important;
+    top: 50% !important;
+    margin-top: -15px !important;
+    margin-left: -15px !important;
+    cursor: pointer !important;
+    outline: none !important;
+}
+
+.statusImage {
+    position: absolute;
+    width: 80px;
+    top: 90px;
+    right: 100px;
+}
+
+#contentSliderContainer {
+    margin-left: 20px;
+}
+
+.settings{
+    visibility: hidden;
+}
+
+#sliderBlock{
+
+}
